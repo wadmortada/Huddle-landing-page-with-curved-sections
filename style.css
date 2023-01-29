@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 * {
     padding: 0;
@@ -11,7 +11,7 @@
     --pink: hsl(322, 100%, 66%);
     --light-pink: hsl(321, 100%, 78%);
     --light-red: hsl(0, 100%, 63%);
-    --dark-cyan: hsl(192, 100%, 9%);
+    --dark-cyan: rgb(234, 234, 234);
     --pale-blue: hsl(207, 100%, 98%);
     --white: #FFFFFF;
 }
@@ -22,11 +22,13 @@ body {
 h1, h2 {
     font-family: var(--head-font);
 }
+p {
+font-size: 0.75rem;
+}
 .pics {
     width: 100%;
 }
 .container {
-    margin: 2rem;
     display: grid;
     grid-template-columns: auto;
     gap: 4rem;
@@ -34,6 +36,7 @@ h1, h2 {
 
 /* Header */
 header {
+    margin: 2rem;
     display: flex;
     justify-content: space-between;
 }
@@ -47,7 +50,7 @@ header a {
     padding: 0.25rem 1.5rem;
     border-radius: 2rem;
     color: var(--pink);
-    box-shadow: 0 0 7rem gray;
+    box-shadow: 0 0 6.5rem gray;
 }
 header a:hover {
     cursor: pointer;
@@ -56,15 +59,13 @@ header a:hover {
 }
 
 /* Main */
-main {
-    margin: 0 4rem;
-}
 .cards {
     display: grid;
     gap: 3rem;
 }
 .card-one {
     text-align: center;
+    margin: 0 4rem;
 }
 .card-one h1 {
     font-size: 1.75rem;
@@ -87,4 +88,62 @@ main {
 }
 .card-one img {
     margin-top: 2rem;
+}
+.card-two {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4rem 2rem 4rem 2rem;
+}
+.details-no {
+    font-size: 3.75rem;
+}
+.card-there {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 4rem;
+    background-color: var(--dark-cyan);
+    padding: 5rem 4rem;
+}
+.card-there img {
+    width: 50%;
+}
+h2 {
+    margin-bottom: 1.25rem;
+}
+.card-four {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    /* background-color: var(--dark-cyan); */
+    padding: 5rem 4rem;
+}
+.card-four img {
+    width: 50%;
+}
+.card-five {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 4rem;
+    background-color: var(--dark-cyan);
+    padding: 5rem 4rem;
+}
+.card-five img {
+    width: 50%;
+}
+.card-sex {
+    text-align: center;
+}
+.card-sex a {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--pink);
+    padding: 0.75rem 3rem;
+    border-radius: 2rem;
+    box-shadow: 0.1rem 0 6.5rem gray;
+}
+.card-sex a:hover {
+    cursor: pointer;
+    background-color: var(--light-pink);
 }

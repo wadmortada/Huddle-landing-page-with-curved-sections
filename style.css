@@ -31,7 +31,7 @@ font-size: 0.75rem;
 .container {
     display: grid;
     grid-template-columns: auto;
-    gap: 4rem;
+    gap: 5rem;
 } 
     /* Header */
     header {
@@ -96,15 +96,24 @@ font-size: 0.75rem;
     .details-no {
         font-size: 3.75rem;
     }
-    .card-there {
+    .bg-dt-1,
+    .bg-dt-2,
+    .bg-dt-fr {
+        width: 100%;
+        display: block;
+    }
+
+    .card-there, .card-five {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         gap: 4rem;
-        background-color: var(--dark-cyan);
         padding: 5rem 4rem;
+        background-color: #F4F6F6;
     }
-    .card-there img {
+    .card-there img,
+    .card-four img,
+    .card-five img {
         width: 50%;
     }
     h2 {
@@ -115,20 +124,6 @@ font-size: 0.75rem;
         align-items: center;
         gap: 4rem;
         padding: 5rem 4rem;
-    }
-    .card-four img {
-        width: 50%;
-    }
-    .card-five {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        gap: 4rem;
-        background-color: var(--dark-cyan);
-        padding: 5rem 4rem;
-    }
-    .card-five img {
-        width: 50%;
     }
     .card-sex {
         text-align: center;
@@ -145,18 +140,22 @@ font-size: 0.75rem;
         cursor: pointer;
         background-color: var(--light-pink);
     }
-    footer {
-        background-color: rgb(41, 128, 0);
+    .footer {
+        background-color: #00252E;
         padding: 4rem 3rem;
         display: grid;
         grid-template-columns: auto auto;
         gap: 20%;
+        color: var(--white);
+
     }
     .footer-logo {
         width: 14rem;
         margin-bottom: 1rem;
+        color: #FFFFFF;
     }
-    .footer-sec-one p {
+    .footer-sec-one p,
+    .footer-sec-two p {
         width: 75%;
     }
     .contact-card {
@@ -166,12 +165,6 @@ font-size: 0.75rem;
     }
     .phone-logo, .email-logo {
         width: 1rem;
-    }
-    .footer-sec-two {
-        color: var(--white);
-    }
-    .footer-sec-two p {
-        width: 75%;
     }
     .sub-card {
         margin-top: 1rem;
@@ -191,151 +184,59 @@ font-size: 0.75rem;
 
  /* Mobile Design */
  @media screen and (max-width: 768px){
-   /* Header */
-    header {
-        margin: 2rem;
-        display: flex;
-        justify-content: space-between;
-    }
-    header img {
-        width: 9rem;
-        height: 2rem;
-    }
-    header a {
-        text-decoration: none;
-        border: 0.125rem solid var(--pink);
-        padding: 0.25rem 1.5rem;
-        border-radius: 2rem;
-        color: var(--pink);
-        box-shadow: 0 0 6.5rem gray;
-    }
-    header a:hover {
-        cursor: pointer;
-        color: var(--light-pink);
-        border: 0.125rem solid var(--light-pink);
-    }
-    
-    /* Main */
-    .cards {
-        display: grid;
-        gap: 3rem;
-    }
-    .card-one {
-        text-align: center;
-        margin: 0 4rem;
-    }
     .card-one a {
-        color: var(--white);
-        padding: 0.1rem 3rem;
-        background-color: var(--pink);
-        border-radius: 2rem;
-        text-decoration: none;
-    }
-    .card-one a:hover {
-        cursor: pointer;
-        background-color: var(--light-pink);
+        padding: 0.5rem 2rem;
+        font-size: 0.75rem;
     }
     .card-one img {
-        margin-top: 2rem;
+        margin-top: 4rem;
     }
     .card-two {
-        display: flex;
-        justify-content: space-evenly;
-        margin: 4rem 2rem 4rem 2rem;
+        display: grid;
+        gap: 5rem;
     }
     .details-no {
-        font-size: 3.75rem;
+        font-size: 3rem;
     }
-    .card-there {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        gap: 4rem;
-        background-color: var(--dark-cyan);
-        padding: 5rem 4rem;
-    }
-    .card-there img {
-        width: 50%;
+    .card-there, .card-four, .card-five {
+        display: grid;
+        justify-items: center;
+        text-align: center;
     }
     h2 {
         margin-bottom: 1.25rem;
     }
-    .card-four {
-        display: flex;
-        align-items: center;
-        gap: 4rem;
-        padding: 5rem 4rem;
-    }
-    .card-four img {
-        width: 50%;
-    }
-    .card-five {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        gap: 4rem;
-        background-color: var(--dark-cyan);
-        padding: 5rem 4rem;
-    }
-    .card-five img {
-        width: 50%;
+    .card-there img, .card-four img, .card-five img {
+        width: 100%;
     }
     .card-sex {
         text-align: center;
+        display: grid;
+        gap: 2.5rem;
+        margin: 4rem 0.25rem;
     }
     .card-sex a {
-        text-decoration: none;
-        color: var(--white);
-        background-color: var(--pink);
-        padding: 0.75rem 3rem;
-        border-radius: 2rem;
-        box-shadow: 0.1rem 0 6.5rem gray;
+        width: 55%;
+        margin: auto;
+        font-size: 0.75rem;
     }
-    .card-sex a:hover {
-        cursor: pointer;
-        background-color: var(--light-pink);
-    }
-    footer {
-        background-color: rgb(41, 128, 0);
-        padding: 4rem 3rem;
+    .footer {
         display: grid;
-        grid-template-columns: auto auto;
-        gap: 20%;
+        grid-template-columns: auto;
+        height: 100vh;
     }
-    .footer-logo {
-        width: 14rem;
-        margin-bottom: 1rem;
-    }
-    .footer-sec-one p {
-        width: 75%;
-    }
-    .contact-card {
-        display: flex;
-        gap: 1.1rem;
-        margin-top: 1rem;
-    }
-    .phone-logo, .email-logo {
-        width: 1rem;
-    }
-    .footer-sec-two {
-        color: var(--white);
-    }
+    .footer-sec-one p,
     .footer-sec-two p {
-        width: 75%;
-    }
-    .sub-card {
-        margin-top: 1rem;
+        width: 100%;
     }
     #email {
-        border-radius: 0.5rem;
-        margin-right: 0.5rem;
-        padding: 0.5rem;
+        display: block;
+        width: 100%;
     }
     #submit {
-        border-radius: 0.5rem;
-        padding: 0.5rem 1rem;
-        background-color: var(--pink);
-        color: var(--white);
+        margin-top: 0.5rem;
+        position: absolute;
+        right: 3rem;
     }       
 }
     
